@@ -1,6 +1,6 @@
-# PoolFormer: MetaFormer is Actually What You Need for Vision
+# PoolFormer: MetaFormer is Actually What You Need for Vision ([arXiv](https://arxiv.org/abs/2111.11418))
 
-This is a PyTorch implementation of **PoolFormer** proposed by our paper "**MetaFormer is Actually What You Need for Vision**" [[arXiv](https://arxiv.org/abs/XXXX.XXXXX)].
+This is a PyTorch implementation of **PoolFormer** proposed by our paper "**MetaFormer is Actually What You Need for Vision**".
 
 
 ![MetaFormer](https://user-images.githubusercontent.com/15921929/142736039-d4237fb4-7d11-46e3-888d-496b52e7244c.png)
@@ -16,9 +16,9 @@ Figure 2: (a) **The overall framework of PoolFormer.** (b) **The architecture of
 ## Reference
 ```
 @article{yu2021metaformer,
-  title={LV-BERT: Exploiting Layer Variety for BERT},
+  title={MetaFormer is Actually What You Need for Vision},
   author={Yu, Weihao and Luo, Mi and Zhou, Pan and Si, Chenyang and Zhou, Yichen and Wang, Xinchao and Feng, Jiashi and Yan Shuicheng},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  journal={arXiv preprint arXiv:2111.11418},
   year={2021}
 }
 ```
