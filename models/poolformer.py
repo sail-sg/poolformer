@@ -63,7 +63,7 @@ default_cfgs = {
 
 class PatchEmbed(nn.Module):
     """
-    Patch Embedding that implemented by a layer of conv. 
+    Patch Embedding that is implemented by a layer of conv. 
     Input: tensor in shape [B, C, H, W]
     Output: tensor in shape [B, C, H/stride, W/stride]
     """

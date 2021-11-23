@@ -13,11 +13,11 @@ Surprisingly, the resulted model PoolFormer consistently outperforms the DeiT an
 ![PoolFormer](https://user-images.githubusercontent.com/15921929/142746124-1ab7635d-2536-4a0e-ad43-b4fe2c5a525d.png)
 Figure 2: (a) **The overall framework of PoolFormer.** (b) **The architecture of PoolFormer block.** Compared with transformer block, it replaces attention with an extremely simple non-parametric operator, pooling, to conduct only basic token mixing.
 
-## Reference
+## Bibtex
 ```
 @article{yu2021metaformer,
   title={MetaFormer is Actually What You Need for Vision},
-  author={Yu, Weihao and Luo, Mi and Zhou, Pan and Si, Chenyang and Zhou, Yichen and Wang, Xinchao and Feng, Jiashi and Yan Shuicheng},
+  author={Yu, Weihao and Luo, Mi and Zhou, Pan and Si, Chenyang and Zhou, Yichen and Wang, Xinchao and Feng, Jiashi and Yan, Shuicheng},
   journal={arXiv preprint arXiv:2111.11418},
   year={2021}
 }
