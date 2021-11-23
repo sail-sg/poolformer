@@ -101,5 +101,14 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./distributed_train.sh 8 /path/to/imagenet 
   --model $MODEL -b 128 --lr 1e-3 --drop-path $DROP_PATH --apex-amp
 ```
 
+## 5. Acknowledgment
+Our implementation is mainly based on the following codebases. We gratefully thank the authors for their wonderful works.
+
+[pytorch-image-models](https://github.com/rwightman/pytorch-image-models), [mmdetection](https://github.com/open-mmlab/mmdetection), [mmsegmentation](https://github.com/open-mmlab/mmsegmentation).
+
+
+Besides, Weihao Yu would like to thank TPU Research Cloud (TRC) program for the support of partial computational resources.
+
+
 ## LICENSE
 This repo is under the Apache-2.0 license. For commercial use, please contact the authors.
