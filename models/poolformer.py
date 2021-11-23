@@ -114,7 +114,7 @@ class GroupNorm(nn.GroupNorm):
 
 class Pooling(nn.Module):
     """
-    Implementation of pooling for PooFormer
+    Implementation of pooling for PoolFormer
     --pool_size: pooling size
     """
     def __init__(self, pool_size=3):
@@ -413,7 +413,7 @@ class PoolFormer(nn.Module):
 @register_model
 def poolformer_s12(pretrained=False, **kwargs):
     """
-    PooFormer-S12 model, Params: 12M
+    PoolFormer-S12 model, Params: 12M
     --layers: [x,x,x,x], numbers of layers for the four stages
     --embed_dims, --mlp_ratios: 
         embedding dims and mlp ratios for the four stages
@@ -434,7 +434,7 @@ def poolformer_s12(pretrained=False, **kwargs):
 @register_model
 def poolformer_s24(pretrained=False, **kwargs):
     """
-    PooFormer-S24 model, Params: 21M
+    PoolFormer-S24 model, Params: 21M
     """
     layers = [4, 4, 12, 4]
     embed_dims = [64, 128, 320, 512]
@@ -451,7 +451,7 @@ def poolformer_s24(pretrained=False, **kwargs):
 @register_model
 def poolformer_s36(pretrained=False, **kwargs):
     """
-    PooFormer-S36 model, Params: 31M
+    PoolFormer-S36 model, Params: 31M
     """
     layers = [6, 6, 18, 6]
     embed_dims = [64, 128, 320, 512]
@@ -469,7 +469,7 @@ def poolformer_s36(pretrained=False, **kwargs):
 @register_model
 def poolformer_m36(pretrained=False, **kwargs):
     """
-    PooFormer-M36 model, Params: 56M
+    PoolFormer-M36 model, Params: 56M
     """
     layers = [6, 6, 18, 6]
     embed_dims = [96, 192, 384, 768]
@@ -487,7 +487,7 @@ def poolformer_m36(pretrained=False, **kwargs):
 @register_model
 def poolformer_m48(pretrained=False, **kwargs):
     """
-    PooFormer-M48 model, Params: 73M
+    PoolFormer-M48 model, Params: 73M
     """
     layers = [8, 8, 24, 8]
     embed_dims = [96, 192, 384, 768]
