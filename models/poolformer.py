@@ -169,7 +169,7 @@ class PoolFormerBlock(nn.Module):
     --drop path: Stochastic Depth, 
         refer to https://arxiv.org/abs/1603.09382
     --use_layer_scale, --layer_scale_init_value: LayerScale, 
-        refer to https://arxiv.org/abs/2012.12877
+        refer to https://arxiv.org/abs/2103.17239
     """
     def __init__(self, dim, pool_size=3, mlp_ratio=4., 
                  act_layer=nn.GELU, norm_layer=GroupNorm, 
