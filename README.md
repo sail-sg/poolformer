@@ -73,12 +73,8 @@ Directory structure in this repo:
 
 All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac).
 
-### Update ResNet Scores in the paper
-![Updated_ResNet_Scores](https://user-images.githubusercontent.com/15921929/143220923-740fd1c0-b679-4875-9e98-bf7002f206d9.png)
-
-[1] He et al., "Deep Residual Learning for Image Recognition", CVPR 2016.
-
-[2] Wightman et al., "Resnet strikes back:  An improved training procedure in timm", arXiv preprint arXiv:2110.00476. 2021 Oct 1.
+### Comparison with improved ResNet scores
+![Updated_ResNet_Scores](https://user-images.githubusercontent.com/15921929/143265711-4742c903-cc62-4562-b030-c47f0157c02b.jpg)
 
 
 ### Usage
