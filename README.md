@@ -73,6 +73,16 @@ Directory structure in this repo:
 
 All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac).
 
+### Update ResNet Scores in the paper
+![Updated_ResNet_Scores](https://user-images.githubusercontent.com/15921929/143220923-740fd1c0-b679-4875-9e98-bf7002f206d9.png)
+
+In our paper, we claim that MetaFormer is the key player in achieving superior results for recent transformer and MLP-like models on vision tasks. Thus, several transformer/MLP-like models are selected as our main baselines. Besides, we also conventionally include ResNet [1] for comparison. However, we find a very recent paper [2] shows ResNet can achieve much better performance with the improved training procedure. Since most models shown in the paper including PoolFormers are trained with 300 epochs, we obtained the improved results of ResNet trained with the same 300 epochs from [2], as shown in the above Table. We can see that PoolFormer consistently outperforms the updated ResNet scores. 
+
+[1] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for image recognition. In Proceedings of the IEEE conference on computer vision and pattern recognition, pages 770–778, 2016
+
+[2] Ross Wightman, Hugo Touvron, and Herve Jegou.   Resnet strikes back:  An improved training procedure in timm. arXiv preprintarXiv:2110.00476, 2021. 11
+
+
 ### Usage
 We also provide a [Colab notebook](https://colab.research.google.com/github/sail-sg/poolformer/blob/main/misc/poolformer_demo.ipynb) which run the steps to perform inference with poolformer.
 
