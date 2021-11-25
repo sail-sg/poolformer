@@ -74,7 +74,7 @@ Directory structure in this repo:
 All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac).
 
 ### Comparison with improved ResNet scores
-![Updated_ResNet_Scores](https://user-images.githubusercontent.com/15921929/143265711-4742c903-cc62-4562-b030-c47f0157c02b.jpg)
+![Updated_ResNet_Scores](https://user-images.githubusercontent.com/15921929/143405367-62437275-f942-4e50-82b9-bfdeddc0d3f1.png)
 
 
 ### Usage
