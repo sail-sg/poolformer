@@ -1,11 +1,11 @@
 # Applying PoolFormer to Object Detection
 
-Our detection detection are based on [MMDetection v2.19.0](https://github.com/open-mmlab/mmdetection/tree/v2.19.0) and [PVT detection](https://github.com/whai362/PVT/tree/v2/detection). Thank the authors for their wonderful works.
+Our detection implemenation are based on [MMDetection v2.19.0](https://github.com/open-mmlab/mmdetection/tree/v2.19.0) and [PVT detection](https://github.com/whai362/PVT/tree/v2/detection). Thank the authors for their wonderful works.
 
 For details see [MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418). 
 
 ## Note
-Please note that we just simplily follow the hyper-parameters of PVT which may not be the optimal ones for PoolFormer. 
+Please note that we just simply follow the hyper-parameters of PVT which may not be the optimal ones for PoolFormer. 
 Feel free to tune the hyper-parameters to get better performance. 
 
 
@@ -70,11 +70,11 @@ Prepare COCO according to the guidelines in [MMDetection v2.19.0](https://github
 | Mask R-CNN | PoolFormer-S36 | ImageNet-1K |    1x   |  No |  41.0  |   37.7  | [config](configs/mask_rcnn_poolformer_s36_fpn_1x_coco.py) | [log](https://drive.google.com/file/d/1oac1AVJ9skQZp0yXjTYY9_IhM8AxHVjT/view?usp=sharing) & [model](https://drive.google.com/file/d/1LyJxcO0fw2hwZg9Z--Zbjbw3W7U4JyqT/view?usp=sharing) |
 
 
-All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac).
+All the models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac).
 
 
 ## Evaluation
-To evaluate PoolFormer-S12 + RetinaNet on COCO val2017 on a single node with 8 gpus run:
+To evaluate PoolFormer-S12 + RetinaNet on COCO val2017 on a single node with 8 GPUs run:
 ```
 FORK_LAST3=1 dist_test.sh configs/retinanet_poolformer_s12_fpn_1x_coco.py /path/to/checkpoint_file 8 --out results.pkl --eval bbox
 ```
@@ -85,7 +85,7 @@ dist_test.sh configs/retinanet_poolformer_s12_fpn_1x_coco.py /path/to/checkpoint
 
 
 ## Training
-To train PoolFormer-S12 + RetinaNet on COCO train2017 on a single node with 8 gpus for 12 epochs run:
+To train PoolFormer-S12 + RetinaNet on COCO train2017 on a single node with 8 GPUs for 12 epochs run:
 
 ```
 FORK_LAST3=1 dist_train.sh configs/retinanet_poolformer_s12_fpn_1x_coco.py 8
