@@ -367,8 +367,10 @@ class PoolFormer(nn.Module):
             state_dict = _state_dict
             missing_keys, unexpected_keys = \
                 self.load_state_dict(state_dict, False)
-            print('missing_keys: ', missing_keys)
-            print('unexpected_keys: ', unexpected_keys)
+            
+            # show for debug
+            # print('missing_keys: ', missing_keys)
+            # print('unexpected_keys: ', unexpected_keys)
 
     def get_classifier(self):
         return self.head

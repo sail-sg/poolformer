@@ -3,12 +3,12 @@
 This is a PyTorch implementation of **PoolFormer** proposed by our paper "**MetaFormer is Actually What You Need for Vision**".
 
 
-![MetaFormer](https://user-images.githubusercontent.com/15921929/142736039-d4237fb4-7d11-46e3-888d-496b52e7244c.png)
+![MetaFormer](https://user-images.githubusercontent.com/15921929/144710761-1635f59a-abde-4946-984c-a2c3f22a19d2.png)
 
 Figure 1: **MetaFormer and performance of MetaFormer-based models on ImageNet-1K validation set.** 
-We argue that the competence of transformer/MLP-like models primarily stems from the general architecture MetaFormer instead of the equipped specific token mixers.
+We argue that the competence of transformer/MLP-like models primarily stem from the general architecture MetaFormer instead of the equipped specific token mixers.
 To demonstrate this, we exploit an embarrassingly simple non-parametric operator, pooling, to conduct extremely basic token mixing. 
-Surprisingly, the resulted model PoolFormer consistently outperforms the DeiT and ResMLP as shown in (b), which well supports that MetaFormer is actually what we need to achieve competitive performance.
+Surprisingly, the resulted model PoolFormer consistently outperforms the DeiT and ResMLP as shown in (b), which well supports that MetaFormer is actually what we need to achieve competitive performance. RSB-ResNet in (b) means the results are from “ResNet Strikes Back” where ResNet is trained with improved training procedure for 300 epochs.
 
 ![PoolFormer](https://user-images.githubusercontent.com/15921929/142746124-1ab7635d-2536-4a0e-ad43-b4fe2c5a525d.png)
 Figure 2: (a) **The overall framework of PoolFormer.** (b) **The architecture of PoolFormer block.** Compared with transformer block, it replaces attention with an extremely simple non-parametric operator, pooling, to conduct only basic token mixing.
@@ -23,8 +23,12 @@ Figure 2: (a) **The overall framework of PoolFormer.** (b) **The architecture of
 }
 ```
 
-## 1. Requirements
-**For Image Classification** (Configs of detection and segmentation will be available soon)
+**Detection and instance segmentation on COCO** configs and trained models are [here](detection/).
+
+**Semantic segmentation on ADE20K** configs and trained models will be available soon.
+
+## Image Classification
+### 1. Requirements
 
 torch>=1.7.0; torchvision>=0.8.0; pyyaml; [apex-amp](https://github.com/NVIDIA/apex) (if you want to use fp16); [timm](https://github.com/rwightman/pytorch-image-models) (pip install git+https://github.com/rwightman/pytorch-image-models.git@9d6aad44f8fd32e89e5cca503efe3ada5071cc2a)
 
@@ -46,21 +50,9 @@ data prepare: ImageNet with the following folder structure, you can extract Imag
 │  ├── ......
 ```
 
-Directory structure in this repo:
-```
-│poolformer/
-├──misc/
-├──models/
-│  ├── __init__.py
-│  ├── poolformer.py
-├──LICENSE
-├──README.md
-├──distributed_train.sh
-├──train.py
-├──validate.py
-```
 
-## 2. PoolFormer Models
+
+### 2. PoolFormer Models
 
 | Model    |  #params | Image resolution | Top1 Acc| Download | 
 | :---     |   :---:    |  :---: |  :---:  |  :---:  |
@@ -73,15 +65,15 @@ Directory structure in this repo:
 
 All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac).
 
-### Comparison with improved ResNet scores
+#### Comparison with improved ResNet scores
 ![Updated_ResNet_Scores](https://user-images.githubusercontent.com/15921929/143457150-f9cab201-963b-43f4-ae04-40a60798ac9b.png)
 
 
-### Usage
+#### Usage
 We also provide a [Colab notebook](https://colab.research.google.com/github/sail-sg/poolformer/blob/main/misc/poolformer_demo.ipynb) which run the steps to perform inference with poolformer.
 
 
-## 3. Validation
+### 3. Validation
 
 To evaluate our PoolFormer models, run:
 
@@ -93,7 +85,7 @@ python3 validate.py /path/to/imagenet  --model $MODEL \
 
 
 
-## 4. Train
+### 4. Train
 We show how to train PoolFormers on 8 GPUs. The relation between learning rate and batch size is lr=bs/1024*1e-3.
 For convenience, assuming the batch size is 1024, then the learning rate is set as 1e-3 (for batch size of 1024, setting the learning rate as 2e-3 sometimes sees better performance). 
 
@@ -105,7 +97,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./distributed_train.sh 8 /path/to/imagenet 
   --model $MODEL -b 128 --lr 1e-3 --drop-path $DROP_PATH --apex-amp
 ```
 
-## 5. Acknowledgment
+## Acknowledgment
 Our implementation is mainly based on the following codebases. We gratefully thank the authors for their wonderful works.
 
 [pytorch-image-models](https://github.com/rwightman/pytorch-image-models), [mmdetection](https://github.com/open-mmlab/mmdetection), [mmsegmentation](https://github.com/open-mmlab/mmsegmentation).
