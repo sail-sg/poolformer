@@ -1,6 +1,6 @@
 # Applying PoolFormer to Object Detection
 
-Our detection implemenation are based on [MMDetection v2.19.0](https://github.com/open-mmlab/mmdetection/tree/v2.19.0) and [PVT detection](https://github.com/whai362/PVT/tree/v2/detection). Thank the authors for their wonderful works.
+Our detection implementation is based on [MMDetection v2.19.0](https://github.com/open-mmlab/mmdetection/tree/v2.19.0) and [PVT detection](https://github.com/whai362/PVT/tree/v2/detection). Thank the authors for their wonderful works.
 
 For details see [MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418). 
 
@@ -50,7 +50,7 @@ optimizer_config = dict(
 )
 ```
 
-`Dockerfile_mmdetseg' is the docker file that I use to set up the environment for detection and segmentation. You also can refer it.
+`Dockerfile_mmdetseg' is the docker file that I use to set up the environment for detection and segmentation. You can also refer to it.
 
 ## Data preparation
 
