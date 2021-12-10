@@ -25,7 +25,7 @@ Figure 2: (a) **The overall framework of PoolFormer.** (b) **The architecture of
 
 **Detection and instance segmentation on COCO** configs and trained models are [here](detection/).
 
-**Semantic segmentation on ADE20K** configs and trained models will be available soon.
+**Semantic segmentation on ADE20K** configs and trained models are [here](segmentation/).
 
 ## Image Classification
 ### 1. Requirements
