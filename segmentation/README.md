@@ -21,7 +21,7 @@ Feel free to tune the hyper-parameters to get better performance.
 
 ## Usage
 
-Install MMSegmentation v0.19.0. `Dockerfile_mmdetseg' is the docker file that I use to set up the environment for detection and segmentation. You can also refer to it.
+Install MMSegmentation v0.19.0. `Dockerfile_mmdetseg` is the docker file that I use to set up the environment for detection and segmentation. You can also refer to it.
 
 
 ## Data preparation

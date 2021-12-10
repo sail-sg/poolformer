@@ -50,7 +50,7 @@ optimizer_config = dict(
 )
 ```
 
-`Dockerfile_mmdetseg' is the docker file that I use to set up the environment for detection and segmentation. You can also refer to it.
+`Dockerfile_mmdetseg` is the docker file that I use to set up the environment for detection and segmentation. You can also refer to it.
 
 ## Data preparation
 
