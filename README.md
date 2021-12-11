@@ -2,6 +2,7 @@
 
 This is a PyTorch implementation of **PoolFormer** proposed by our paper "**MetaFormer is Actually What You Need for Vision**".
 
+**Note**: Instead of designing complicated token mixer to achieve SOTA performance, the target of this work is to demonstrate the competence of transformer models largely stem from the general architecture MetaFormer. Pooling/PoolFormer are just the tools to support our claim. 
 
 ![MetaFormer](https://user-images.githubusercontent.com/15921929/144710761-1635f59a-abde-4946-984c-a2c3f22a19d2.png)
 
