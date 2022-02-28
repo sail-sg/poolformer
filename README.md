@@ -69,6 +69,11 @@ All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baid
 #### Comparison with improved ResNet scores
 ![Updated_ResNet_Scores](https://user-images.githubusercontent.com/15921929/143457150-f9cab201-963b-43f4-ae04-40a60798ac9b.png)
 
+### Web Demo
+
+Integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try out the Web Demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/poolformer)
+
+
 
 #### Usage
 We also provide a [Colab notebook](https://colab.research.google.com/github/sail-sg/poolformer/blob/main/misc/poolformer_demo.ipynb) which run the steps to perform inference with poolformer.
