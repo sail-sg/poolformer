@@ -1,6 +1,6 @@
-# PoolFormer: MetaFormer is Actually What You Need for Vision ([arXiv](https://arxiv.org/abs/2111.11418))
+# PoolFormer: MetaFormer is Actually What You Need for Vision (CVPR 2022)
 
-This is a PyTorch implementation of **PoolFormer** proposed by our paper "**MetaFormer is Actually What You Need for Vision**".
+This is a PyTorch implementation of **PoolFormer** proposed by our paper "**MetaFormer is Actually What You Need for Vision**" (CVPR 2022). [![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg?style=flat)](https://arxiv.org/abs/2111.11418)
 
 **Note**: Instead of designing complicated token mixer to achieve SOTA performance, the target of this work is to demonstrate the competence of transformer models largely stem from the general architecture MetaFormer. Pooling/PoolFormer are just the tools to support our claim. 
 
