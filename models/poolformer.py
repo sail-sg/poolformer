@@ -247,8 +247,8 @@ class PoolFormer(nn.Module):
         for the input image
     --down_patch_size --down_stride --down_pad: 
         specify the downsample (patch embed.)
-    --fork_faat: whetehr output features of the 4 stages, for dense prediction
-    --init_cfg，--pretrained: 
+    --fork_feat: whetehr output features of the 4 stages, for dense prediction
+    --init_cfg, --pretrained: 
         for mmdetection and mmsegmentation to load pretrianfed weights
     """
     def __init__(self, layers, embed_dims=None, 
