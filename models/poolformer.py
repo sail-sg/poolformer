@@ -241,15 +241,15 @@ class PoolFormer(nn.Module):
     --embed_dims, --mlp_ratios, --pool_size: the embedding dims, mlp ratios and 
         pooling size for the 4 stages
     --downsamples: flags to apply downsampling or not
-    --norm_layer, --act_layer: define the types of normalizaiotn and activation
+    --norm_layer, --act_layer: define the types of normalization and activation
     --num_classes: number of classes for the image classification
     --in_patch_size, --in_stride, --in_pad: specify the patch embedding
         for the input image
     --down_patch_size --down_stride --down_pad: 
         specify the downsample (patch embed.)
-    --fork_faat: whetehr output features of the 4 stages, for dense prediction
-    --init_cfg，--pretrained: 
-        for mmdetection and mmsegmentation to load pretrianfed weights
+    --fork_feat: whether output features of the 4 stages, for dense prediction
+    --init_cfg, --pretrained: 
+        for mmdetection and mmsegmentation to load pretrained weights
     """
     def __init__(self, layers, embed_dims=None, 
                  mlp_ratios=None, downsamples=None, 
