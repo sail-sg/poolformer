@@ -1,26 +1,13 @@
 # Applying PoolFormer to Object Detection
 
-Our detection implementation is based on [MMDetection v2.19.0](https://github.com/open-mmlab/mmdetection/tree/v2.19.0) and [PVT detection](https://github.com/whai362/PVT/tree/v2/detection). Thank the authors for their wonderful works.
-
-For details see [MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418). 
+For details see [MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418) (CVPR 2020 Oral). 
 
 ## Note
-Please note that we just simply follow the hyper-parameters of PVT which may not be the optimal ones for PoolFormer. 
+Please note that we just simply follow the hyper-parameters of [PVT](https://github.com/whai362/PVT/tree/v2/detection) which may not be the optimal ones for PoolFormer. 
 Feel free to tune the hyper-parameters to get better performance. 
 
 
-## Bibtex
-```
-@article{yu2021metaformer,
-  title={MetaFormer is Actually What You Need for Vision},
-  author={Yu, Weihao and Luo, Mi and Zhou, Pan and Si, Chenyang and Zhou, Yichen and Wang, Xinchao and Feng, Jiashi and Yan, Shuicheng},
-  journal={arXiv preprint arXiv:2111.11418},
-  year={2021}
-}
-```
-
-
-## Usage
+## Environement Setup
 
 Install [MMDetection v2.19.0](https://github.com/open-mmlab/mmdetection/tree/v2.19.0) from souce cocde,
 
@@ -50,7 +37,10 @@ optimizer_config = dict(
 )
 ```
 
-`Dockerfile_mmdetseg` is the docker file that I use to set up the environment for detection and segmentation. You can also refer to it.
+Note: Since we write [PoolFormer backbone code](../models/poolformer.py) of detection and segmentation in a same file which requires to install both [MMDetection v2.19.0](https://github.com/open-mmlab/mmdetection/tree/v2.19.0) and [MMSegmentation v0.19.0](https://github.com/open-mmlab/mmsegmentation/tree/v0.19.0). Please continue to install MMSegmentation or modify the backone code.
+
+
+[Dockerfile_mmdetseg](Dockerfile_mmdetseg) is the docker file that I use to set up the environment for detection and segmentation. You can also refer to it.
 
 ## Data preparation
 
@@ -80,7 +70,7 @@ FORK_LAST3=1 dist_test.sh configs/retinanet_poolformer_s12_fpn_1x_coco.py /path/
 ```
 To evaluate PoolFormer-S12 + Mask R-CNN on COCO val2017, run:
 ```
-dist_test.sh configs/retinanet_poolformer_s12_fpn_1x_coco.py /path/to/checkpoint_file 8 --out results.pkl --eval bbox segm
+dist_test.sh configs/mask_rcnn_poolformer_s12_fpn_1x_coco.py /path/to/checkpoint_file 8 --out results.pkl --eval bbox segm
 ```
 
 
@@ -95,3 +85,18 @@ To train PoolFormer-S12 + Mask R-CNN on COCO train2017:
 ```
 dist_train.sh configs/mask_rcnn_poolformer_s12_fpn_1x_coco.py 8
 ```
+
+## Bibtex
+```
+@article{yu2021metaformer,
+  title={MetaFormer is Actually What You Need for Vision},
+  author={Yu, Weihao and Luo, Mi and Zhou, Pan and Si, Chenyang and Zhou, Yichen and Wang, Xinchao and Feng, Jiashi and Yan, Shuicheng},
+  journal={arXiv preprint arXiv:2111.11418},
+  year={2021}
+}
+```
+
+## Acknowledgment
+Our implementation is mainly based on the following codebases. We gratefully thank the authors for their wonderful works.
+
+[mmdetection](https://github.com/open-mmlab/mmdetection), [PVT detection](https://github.com/whai362/PVT/tree/v2/detection).

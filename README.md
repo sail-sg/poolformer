@@ -1,6 +1,17 @@
-# PoolFormer: MetaFormer is Actually What You Need for Vision (CVPR 2022)
+# PoolFormer: [MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418) (CVPR 2022 Oral)
 
-This is a PyTorch implementation of **PoolFormer** proposed by our paper "**MetaFormer is Actually What You Need for Vision**" (CVPR 2022). [![arXiv](https://img.shields.io/badge/arXiv-2111.11418-b31b1b.svg?style=flat)](https://arxiv.org/abs/2111.11418)
+<p align="center">
+<a href="https://arxiv.org/abs/2111.11418" alt="arXiv">
+    <img src="https://img.shields.io/badge/arXiv-2111.11418-b31b1b.svg?style=flat" /></a>
+<a href="https://huggingface.co/spaces/akhaliq/poolformer" alt="Hugging Face Spaces">
+    <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue" /></a>
+<a href="https://colab.research.google.com/github/sail-sg/poolformer/blob/main/misc/poolformer_demo.ipynb" alt="Colab">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+</p>
+
+
+This is a PyTorch implementation of **PoolFormer** proposed by our paper "[MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418)" (CVPR 2022 Oral).
+
 
 **Note**: Instead of designing complicated token mixer to achieve SOTA performance, the target of this work is to demonstrate the competence of transformer models largely stem from the general architecture MetaFormer. Pooling/PoolFormer are just the tools to support our claim. 
 
@@ -69,14 +80,14 @@ All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baid
 #### Comparison with improved ResNet scores
 ![Updated_ResNet_Scores](https://user-images.githubusercontent.com/15921929/143457150-f9cab201-963b-43f4-ae04-40a60798ac9b.png)
 
-### Web Demo
+#### Web Demo
 
 Integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try out the Web Demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/poolformer)
 
 
 
 #### Usage
-We also provide a [Colab notebook](https://colab.research.google.com/github/sail-sg/poolformer/blob/main/misc/poolformer_demo.ipynb) which run the steps to perform inference with poolformer.
+We also provide a Colab notebook which run the steps to perform inference with poolformer: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sail-sg/poolformer/blob/main/misc/poolformer_demo.ipynb)
 
 
 ### 3. Validation
@@ -110,7 +121,3 @@ Our implementation is mainly based on the following codebases. We gratefully tha
 
 
 Besides, Weihao Yu would like to thank TPU Research Cloud (TRC) program for the support of partial computational resources.
-
-
-## LICENSE
-This repo is under the Apache-2.0 license. For commercial use, please contact the authors.

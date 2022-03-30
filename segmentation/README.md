@@ -1,27 +1,18 @@
 # Applying PoolFormer to Semantic Segmentation
 
-Our semantic segmentation implementation is based on [MMSegmentation v0.19.0](https://github.com/open-mmlab/mmsegmentation/tree/v0.19.0) and [PVT segmentation](https://github.com/whai362/PVT/tree/v2/segmentation). Thank the authors for their wonderful works.
-
-For details see [MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418). 
+For details see [MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418) (CVPR 2020 Oral). 
 
 ## Note
-Please note that we just simply follow the hyper-parameters of PVT which may not be the optimal ones for PoolFormer. 
+Please note that we just simply follow the hyper-parameters of [PVT](https://github.com/whai362/PVT/tree/v2/segmentation) which may not be the optimal ones for PoolFormer. 
 Feel free to tune the hyper-parameters to get better performance. 
 
+## Environement Setup
 
-## Bibtex
-```
-@article{yu2021metaformer,
-  title={MetaFormer is Actually What You Need for Vision},
-  author={Yu, Weihao and Luo, Mi and Zhou, Pan and Si, Chenyang and Zhou, Yichen and Wang, Xinchao and Feng, Jiashi and Yan, Shuicheng},
-  journal={arXiv preprint arXiv:2111.11418},
-  year={2021}
-}
-```
+Install [MMSegmentation v0.19.0](https://github.com/open-mmlab/mmsegmentation/tree/v0.19.0). 
 
-## Usage
+Note: Since we write [PoolFormer backbone code](../models/poolformer.py) of detection and segmentation in a same file which requires to install both [MMDetection v2.19.0](https://github.com/open-mmlab/mmdetection/tree/v2.19.0) and [MMSegmentation v0.19.0](https://github.com/open-mmlab/mmsegmentation/tree/v0.19.0). Please continue to install MMDetection or modify the backone code.
 
-Install MMSegmentation v0.19.0. `Dockerfile_mmdetseg` is the docker file that I use to set up the environment for detection and segmentation. You can also refer to it.
+[Dockerfile_mmdetseg](../detection/Dockerfile_mmdetseg) is the docker file that I use to set up the environment for detection and segmentation. You can also refer to it.
 
 
 ## Data preparation
@@ -55,3 +46,18 @@ To train PoolFormer-S12 + Semantic FPN on a single node with 8 GPUs run:
 ```
 dist_train.sh configs/sem_fpn/PoolFormer/fpn_poolformer_s12_ade20k_40k.py 8
 ```
+
+## Bibtex
+```
+@article{yu2021metaformer,
+  title={MetaFormer is Actually What You Need for Vision},
+  author={Yu, Weihao and Luo, Mi and Zhou, Pan and Si, Chenyang and Zhou, Yichen and Wang, Xinchao and Feng, Jiashi and Yan, Shuicheng},
+  journal={arXiv preprint arXiv:2111.11418},
+  year={2021}
+}
+```
+
+## Acknowledgment
+Our segmentation implementation is mainly based on the following codebases. We gratefully thank the authors for their wonderful works.
+
+[mmsegmentation](https://github.com/open-mmlab/mmsegmentation), [PVT segmentation](https://github.com/whai362/PVT/tree/v2/segmentation).
