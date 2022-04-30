@@ -1,6 +1,6 @@
 # Applying PoolFormer to Object Detection
 
-For details see [MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418) (CVPR 2020 Oral). 
+For details see [MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418) (CVPR 2022 Oral). 
 
 ## Note
 Please note that we just simply follow the hyper-parameters of [PVT](https://github.com/whai362/PVT/tree/v2/detection) which may not be the optimal ones for PoolFormer. 
