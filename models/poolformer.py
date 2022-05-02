@@ -412,6 +412,15 @@ class PoolFormer(nn.Module):
         return cls_out
 
 
+model_urls = {
+    "poolformer_s12": "https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_s12.pth.tar",
+    "poolformer_s24": "https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_s24.pth.tar",
+    "poolformer_s36": "https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_s36.pth.tar",
+    "poolformer_m36": "https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_m36.pth.tar",
+    "poolformer_m48": "https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_m48.pth.tar",
+}
+
+
 @register_model
 def poolformer_s12(pretrained=False, **kwargs):
     """
@@ -430,6 +439,10 @@ def poolformer_s12(pretrained=False, **kwargs):
         mlp_ratios=mlp_ratios, downsamples=downsamples, 
         **kwargs)
     model.default_cfg = default_cfgs['poolformer_s']
+    if pretrained:
+        url = model_urls['poolformer_s12']
+        checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
+        model.load_state_dict(checkpoint)
     return model
 
 
@@ -447,6 +460,10 @@ def poolformer_s24(pretrained=False, **kwargs):
         mlp_ratios=mlp_ratios, downsamples=downsamples, 
         **kwargs)
     model.default_cfg = default_cfgs['poolformer_s']
+    if pretrained:
+        url = model_urls['poolformer_s24']
+        checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
+        model.load_state_dict(checkpoint)
     return model
 
 
@@ -465,6 +482,10 @@ def poolformer_s36(pretrained=False, **kwargs):
         layer_scale_init_value=1e-6, 
         **kwargs)
     model.default_cfg = default_cfgs['poolformer_s']
+    if pretrained:
+        url = model_urls['poolformer_s36']
+        checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
+        model.load_state_dict(checkpoint)
     return model
 
 
@@ -483,6 +504,10 @@ def poolformer_m36(pretrained=False, **kwargs):
         layer_scale_init_value=1e-6, 
         **kwargs)
     model.default_cfg = default_cfgs['poolformer_m']
+    if pretrained:
+        url = model_urls['poolformer_m36']
+        checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
+        model.load_state_dict(checkpoint)
     return model
 
 
@@ -501,6 +526,10 @@ def poolformer_m48(pretrained=False, **kwargs):
         layer_scale_init_value=1e-6, 
         **kwargs)
     model.default_cfg = default_cfgs['poolformer_m']
+    if pretrained:
+        url = model_urls['poolformer_m48']
+        checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
+        model.load_state_dict(checkpoint)
     return model
 
 

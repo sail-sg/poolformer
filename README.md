@@ -96,8 +96,8 @@ To evaluate our PoolFormer models, run:
 
 ```bash
 MODEL=poolformer_s12 # poolformer_{s12, s24, s36, m36, m48}
-python3 validate.py /path/to/imagenet  --model $MODEL \
-  --checkpoint /path/to/checkpoint -b 128
+python3 validate.py /path/to/imagenet  --model $MODEL -b 128 \
+  --pretrained # or --checkpoint /path/to/checkpoint 
 ```
 
 
