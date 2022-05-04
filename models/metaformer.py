@@ -140,9 +140,9 @@ class SpatialFc(nn.Module):
 
 class MetaFormerBlock(nn.Module):
     """
-    Implementation of one PoolFormer block.
+    Implementation of one MetaFormer block.
     --dim: embedding dim
-    --pool_size: pooling size
+    --token_mixer: token mixer module
     --mlp_ratio: mlp expansion ratio
     --act_layer: activation
     --norm_layer: normalization
@@ -222,16 +222,17 @@ def basic_blocks(dim, index, layers, token_mixer=nn.Identity,
 
 class MetaFormer(nn.Module):
     """
-    PoolFormer, the main class of our model
+    MetaFormer, the main class of our model
     --layers: [x,x,x,x], number of blocks for the 4 stages
     --embed_dims, --mlp_ratios: the embedding dims and mlp ratios for the 4 stages
-    --downsamples: flags to apply downsampling or not
+    --token_mixers: token mixers of different stages
     --norm_layer, --act_layer: define the types of normalization and activation
     --num_classes: number of classes for the image classification
     --in_patch_size, --in_stride, --in_pad: specify the patch embedding
         for the input image
     --down_patch_size --down_stride --down_pad: 
         specify the downsample (patch embed.)
+    --add_pos_embs: position embedding modules of different stages
     """
     def __init__(self, layers, embed_dims=None, 
                  token_mixers=None, mlp_ratios=None, 
@@ -242,7 +243,6 @@ class MetaFormer(nn.Module):
                  add_pos_embs=None, 
                  drop_rate=0., drop_path_rate=0.,
                  use_layer_scale=True, layer_scale_init_value=1e-5, 
-                 pretrained=None, 
                  **kwargs):
 
         super().__init__()
