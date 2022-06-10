@@ -11,6 +11,7 @@ In MetaFormer paper, we use --model=
 for visualization in the appendix.
 """
 import argparse
+import os
 import cv2
 import numpy as np
 import torch
@@ -179,9 +180,10 @@ if __name__ == '__main__':
         import requests
         image_url = 'http://146.48.86.29/edge-mac/imgs/n02123045/ILSVRC2012_val_00023779.JPEG'
         img_path = image_url.split('/')[-1]
-        img_data = requests.get(image_url).content
-        with open(img_path, 'wb') as handler:
-            handler.write(img_data)
+        if os.path.exists(img_path):
+            img_data = requests.get(image_url).content
+            with open(img_path, 'wb') as handler:
+                handler.write(img_data)
 
     if args.output_image_path:
         save_name = args.output_image_path
