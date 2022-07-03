@@ -6,9 +6,14 @@ Modifed from: https://github.com/jacobgil/pytorch-grad-cam/blob/master/cam.py
 please install the following packages
 `pip install grad-cam timm`
 
-In MetaFormer paper, we use --model=
-["poolformer_s24", "resnet50", "deit_small_patch16_224", "resmlp_24_224"]
-for visualization in the appendix.
+In the appendix of MetaFormer paper, we use --model=
+["poolformer_s24", "resnet50", "deit_small_patch16_224", "resmlp_24_224", "resize"]
+for visualization in the appendix. "resize" means resizing the image to resolution 224x224.
+The images we shown in the appenix are from ImageNet valdiation set:
+val/n02123045/ILSVRC2012_val_00023779.JPEG
+val/n03063599/ILSVRC2012_val_00016576.JPEG
+val/n01833805/ILSVRC2012_val_00005779.JPEG
+val/n07873807/ILSVRC2012_val_00018461.JPEG
 """
 import argparse
 import os
@@ -122,8 +127,10 @@ if __name__ == '__main__':
          "layercam": LayerCAM,
          "fullgrad": FullGrad}
 
-
-    model = getattr(timm.models, args.model)(pretrained=('resnet' not in args.model))
+    if args.model == 'resize':
+        model = torch.nn.Identity()
+    else:
+        model = getattr(timm.models, args.model)(pretrained=('resnet' not in args.model))
     if 'resnet' in args.model:
         # resnet load the model trianed with 600 epochs
         # for fair comparison, load the model trained with 300 epochs.
@@ -153,8 +160,7 @@ if __name__ == '__main__':
     elif 'swin' in args.model:
         target_layers = [model.layers[-1].blocks[-1]]
         reshape_transform = reshape_transform_swin
-    elif args.model == 'resize':
-        model = torch.nn.Identity()
+
 
     model.eval()
     # Choose the target layer you want to compute the visualization for.
