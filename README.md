@@ -16,7 +16,6 @@ This is a PyTorch implementation of **PoolFormer** proposed by our paper "[MetaF
 **Note**: Instead of designing complicated token mixer to achieve SOTA performance, the target of this work is to demonstrate the competence of Transformer models largely stem from the general architecture MetaFormer. Pooling/PoolFormer are just the tools to support our claim. 
 
 ![MetaFormer](https://user-images.githubusercontent.com/49296856/177275244-13412754-3d49-43ef-a8bd-17c0874c02c1.png)
-
 Figure 1: **MetaFormer and performance of MetaFormer-based models on ImageNet-1K validation set.** 
 We argue that the competence of Transformer/MLP-like models primarily stem from the general architecture MetaFormer instead of the equipped specific token mixers.
 To demonstrate this, we exploit an embarrassingly simple non-parametric operator, pooling, to conduct extremely basic token mixing. 
@@ -75,7 +74,7 @@ data prepare: ImageNet with the following folder structure, you can extract Imag
 | poolformer_m48  |   73M     |   224 | 11.6G | 82.5  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_m48.pth.tar) | 
 
 
-All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac). * We update the numbers of MACs counted by [fvcore](https://github.com/facebookresearch/fvcore) library ([example code](misc/mac_count_with_fvcore.py)) which are also reported in the [new arXiv version](https://arxiv.org/abs/2111.11418).
+All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac). * For convenient comparison with future models, we update the numbers of MACs counted by [fvcore](https://github.com/facebookresearch/fvcore) library ([example code](misc/mac_count_with_fvcore.py)) which are also reported in the [new arXiv version](https://arxiv.org/abs/2111.11418).
 
 
 #### Web Demo
