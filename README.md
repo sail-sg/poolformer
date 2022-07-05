@@ -15,7 +15,7 @@ This is a PyTorch implementation of **PoolFormer** proposed by our paper "[MetaF
 
 **Note**: Instead of designing complicated token mixer to achieve SOTA performance, the target of this work is to demonstrate the competence of transformer models largely stem from the general architecture MetaFormer. Pooling/PoolFormer are just the tools to support our claim. 
 
-![MetaFormer](https://user-images.githubusercontent.com/15921929/144710761-1635f59a-abde-4946-984c-a2c3f22a19d2.png)
+![MetaFormer](https://user-images.githubusercontent.com/49296856/177275244-13412754-3d49-43ef-a8bd-17c0874c02c1.png)
 
 Figure 1: **MetaFormer and performance of MetaFormer-based models on ImageNet-1K validation set.** 
 We argue that the competence of transformer/MLP-like models primarily stem from the general architecture MetaFormer instead of the equipped specific token mixers.
@@ -66,19 +66,17 @@ data prepare: ImageNet with the following folder structure, you can extract Imag
 
 ### 2. PoolFormer Models
 
-| Model    |  #params | Image resolution | Top1 Acc| Download | 
-| :---     |   :---:    |  :---: |  :---:  |  :---:  |
-| poolformer_s12  |    12M     |   224 |  77.2  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_s12.pth.tar) |
-| poolformer_s24 |   21M     |   224 |  80.3  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_s24.pth.tar) |
-| poolformer_s36  |   31M     |   224 |  81.4  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_s36.pth.tar) |
-| poolformer_m36 |   56M     |   224 |  82.1  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_m36.pth.tar) |
-| poolformer_m48  |   73M     |   224 |  82.5  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_m48.pth.tar) | 
+| Model    |  #Params | Image resolution | #MACs* | Top1 Acc| Download | 
+| :---     |   :---:    |  :---: |  :---: |  :---:  |  :---:  |
+| poolformer_s12  |    12M     |   224  |  1.8G |  77.2  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_s12.pth.tar) |
+| poolformer_s24 |   21M     |   224 | 3.4G | 80.3  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_s24.pth.tar) |
+| poolformer_s36  |   31M     |   224 | 5.0G | 81.4  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_s36.pth.tar) |
+| poolformer_m36 |   56M     |   224 | 8.8G | 82.1  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_m36.pth.tar) |
+| poolformer_m48  |   73M     |   224 | 11.6G | 82.5  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_m48.pth.tar) | 
 
 
-All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac).
+All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac). * We update the numbers of MACs counted by [fvcore](https://github.com/facebookresearch/fvcore) library in the new arXiv version (see the [example code](misc/mac_count_with_fvcore.py)).
 
-#### Comparison with improved ResNet scores
-![Updated_ResNet_Scores](https://user-images.githubusercontent.com/15921929/143457150-f9cab201-963b-43f4-ae04-40a60798ac9b.png)
 
 #### Web Demo
 
