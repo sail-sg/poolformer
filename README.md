@@ -1,4 +1,4 @@
-# PoolFormer: [MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418) (CVPR 2022 Oral)
+# PoolFormer: [MetaFormer Is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418) (CVPR 2022 Oral)
 
 <p align="center">
 <a href="https://arxiv.org/abs/2111.11418" alt="arXiv">
@@ -10,25 +10,25 @@
 </p>
 
 
-This is a PyTorch implementation of **PoolFormer** proposed by our paper "[MetaFormer is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418)" (CVPR 2022 Oral).
+This is a PyTorch implementation of **PoolFormer** proposed by our paper "[MetaFormer Is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418)" (CVPR 2022 Oral).
 
 
-**Note**: Instead of designing complicated token mixer to achieve SOTA performance, the target of this work is to demonstrate the competence of transformer models largely stem from the general architecture MetaFormer. Pooling/PoolFormer are just the tools to support our claim. 
+**Note**: Instead of designing complicated token mixer to achieve SOTA performance, the target of this work is to demonstrate the competence of Transformer models largely stem from the general architecture MetaFormer. Pooling/PoolFormer are just the tools to support our claim. 
 
 ![MetaFormer](https://user-images.githubusercontent.com/49296856/177275244-13412754-3d49-43ef-a8bd-17c0874c02c1.png)
 
 Figure 1: **MetaFormer and performance of MetaFormer-based models on ImageNet-1K validation set.** 
-We argue that the competence of transformer/MLP-like models primarily stem from the general architecture MetaFormer instead of the equipped specific token mixers.
+We argue that the competence of Transformer/MLP-like models primarily stem from the general architecture MetaFormer instead of the equipped specific token mixers.
 To demonstrate this, we exploit an embarrassingly simple non-parametric operator, pooling, to conduct extremely basic token mixing. 
 Surprisingly, the resulted model PoolFormer consistently outperforms the DeiT and ResMLP as shown in (b), which well supports that MetaFormer is actually what we need to achieve competitive performance. RSB-ResNet in (b) means the results are from “ResNet Strikes Back” where ResNet is trained with improved training procedure for 300 epochs.
 
 ![PoolFormer](https://user-images.githubusercontent.com/15921929/142746124-1ab7635d-2536-4a0e-ad43-b4fe2c5a525d.png)
-Figure 2: (a) **The overall framework of PoolFormer.** (b) **The architecture of PoolFormer block.** Compared with transformer block, it replaces attention with an extremely simple non-parametric operator, pooling, to conduct only basic token mixing.
+Figure 2: (a) **The overall framework of PoolFormer.** (b) **The architecture of PoolFormer block.** Compared with Transformer block, it replaces attention with an extremely simple non-parametric operator, pooling, to conduct only basic token mixing.
 
 ## Bibtex
 ```
 @article{yu2021metaformer,
-  title={MetaFormer is Actually What You Need for Vision},
+  title={MetaFormer Is Actually What You Need for Vision},
   author={Yu, Weihao and Luo, Mi and Zhou, Pan and Si, Chenyang and Zhou, Yichen and Wang, Xinchao and Feng, Jiashi and Yan, Shuicheng},
   journal={arXiv preprint arXiv:2111.11418},
   year={2021}
@@ -75,7 +75,7 @@ data prepare: ImageNet with the following folder structure, you can extract Imag
 | poolformer_m48  |   73M     |   224 | 11.6G | 82.5  | [here](https://github.com/sail-sg/poolformer/releases/download/v1.0/poolformer_m48.pth.tar) | 
 
 
-All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac). * We update the numbers of MACs counted by [fvcore](https://github.com/facebookresearch/fvcore) library in the new arXiv version (see the [example code](misc/mac_count_with_fvcore.py)).
+All the pretrained models can also be downloaded by [BaiDu Yun](https://pan.baidu.com/s/1HSaJtxgCkUlawurQLq87wQ) (password: esac). * We update the numbers of MACs counted by [fvcore](https://github.com/facebookresearch/fvcore) library ([example code](misc/mac_count_with_fvcore.py)) which are also reported in the [new arXiv version](https://arxiv.org/abs/2111.11418).
 
 
 #### Web Demo
