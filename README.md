@@ -11,7 +11,7 @@
 
 
 ---
-:fire: :fire: Our follow-up work "[MetaFormer Is Actually What You Need for Vision](https://arxiv.org/abs/2111.11418)" introduce more MetaFormer baselines including
+:fire: :fire: Our follow-up work "[MetaFormer Baselines for Vision](https://arxiv.org/abs/2210.13452)" introduce more MetaFormer baselines including
 + **IdentityFormer** with token mixer of identity mapping surprisingly achieve >80% accuracy.
 + **RandFormer** achieves >81% accuracy by random token mixing, demonstrating MetaForemr works well with arbitrary token mixers.
 + **ConvFormer** with token mixer of separable convolution significantly outperforms ConvNeXt by large margin.
