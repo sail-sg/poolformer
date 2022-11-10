@@ -48,6 +48,10 @@ Figure 2: (a) **The overall framework of PoolFormer.** (b) **The architecture of
 
 **Semantic segmentation on ADE20K** configs and trained models are [here](segmentation/).
 
+The code to visualize Grad-CAM activation maps of PoolFomer, DeiT, ResMLP, ResNet and Swin are [here](misc/cam_image.py).
+
+The code to measure MACs are [here](misc/mac_count_with_fvcore.py).
+
 ## Image Classification
 ### 1. Requirements
 
