@@ -125,6 +125,12 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./distributed_train.sh 8 /path/to/imagenet 
   --model $MODEL -b 128 --lr 1e-3 --drop-path $DROP_PATH --apex-amp
 ```
 
+### 5. Visualization
+![gradcam](https://user-images.githubusercontent.com/15921929/201674709-024a5356-42f2-433d-89e7-801c23646211.png)
+
+The code to visualize Grad-CAM activation maps of PoolFomer, DeiT, ResMLP, ResNet and Swin are [here](misc/cam_image.py).
+
+
 ## Acknowledgment
 Our implementation is mainly based on the following codebases. We gratefully thank the authors for their wonderful works.
 
