@@ -14,6 +14,9 @@ val/n02123045/ILSVRC2012_val_00023779.JPEG
 val/n03063599/ILSVRC2012_val_00016576.JPEG
 val/n01833805/ILSVRC2012_val_00005779.JPEG
 val/n07873807/ILSVRC2012_val_00018461.JPEG
+
+Example command:
+python3 cam_image.py /path/to/image.JPEG --model poolformer_s24
 """
 import argparse
 import os
