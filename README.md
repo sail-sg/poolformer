@@ -36,11 +36,12 @@ Figure 2: (a) **The overall framework of PoolFormer.** (b) **The architecture of
 
 ## Bibtex
 ```
-@article{yu2021metaformer,
-  title={MetaFormer Is Actually What You Need for Vision},
+@inproceedings{yu2022metaformer,
+  title={Metaformer is actually what you need for vision},
   author={Yu, Weihao and Luo, Mi and Zhou, Pan and Si, Chenyang and Zhou, Yichen and Wang, Xinchao and Feng, Jiashi and Yan, Shuicheng},
-  journal={arXiv preprint arXiv:2111.11418},
-  year={2021}
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={10819--10829},
+  year={2022}
 }
 ```
 
