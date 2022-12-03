@@ -31,7 +31,11 @@ We argue that the competence of Transformer/MLP-like models primarily stem from 
 To demonstrate this, we exploit an embarrassingly simple non-parametric operator, pooling, to conduct extremely basic token mixing. 
 Surprisingly, the resulted model PoolFormer consistently outperforms the DeiT and ResMLP as shown in (b), which well supports that MetaFormer is actually what we need to achieve competitive performance. RSB-ResNet in (b) means the results are from “ResNet Strikes Back” where ResNet is trained with improved training procedure for 300 epochs.
 
-![PoolFormer](https://user-images.githubusercontent.com/49296856/205430159-54bba545-520e-4ab8-8a77-278d90b54ec4.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/49296856/205430159-54bba545-520e-4ab8-8a77-278d90b54ec4.png" alt="PoolFormer"/>
+</p>
+
 Figure 2: (a) **The overall framework of PoolFormer.** (b) **The architecture of PoolFormer block.** Compared with Transformer block, it replaces attention with an extremely simple non-parametric operator, pooling, to conduct only basic token mixing.
 
 ## Bibtex
