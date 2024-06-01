@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/badge/arXiv-2111.11418-b31b1b.svg?style=flat" /></a>
 <a href="https://huggingface.co/spaces/akhaliq/poolformer" alt="Hugging Face Spaces">
     <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue" /></a>
-<a href="https://colab.research.google.com/github/sail-sg/poolformer/blob/main/misc/poolformer_demo.ipynb" alt="Colab">
+<a href="https://drive.google.com/file/d/1Odss7a-RlHgJOy8yLrd93VxwkW6xKe66/view?usp=sharing" alt="Colab">
     <img src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
 </p>
 
@@ -103,7 +103,7 @@ Integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [
 
 
 #### Usage
-We also provide a Colab notebook which run the steps to perform inference with poolformer: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sail-sg/poolformer/blob/main/misc/poolformer_demo.ipynb)
+We also provide a Colab notebook which run the steps to perform inference with poolformer: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1Odss7a-RlHgJOy8yLrd93VxwkW6xKe66/view?usp=sharing)
 
 
 ### 3. Validation
